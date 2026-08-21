@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-07-17",
+    "conversations": 1,
+    "turns": 5,
+    "input_chars": 20672,
+    "output_chars": 6740
+  },
+  {
+    "date": "2026-07-20",
+    "conversations": 1,
+    "turns": 1,
+    "input_chars": 425,
+    "output_chars": 95
+  },
+  {
+    "date": "2026-07-22",
+    "conversations": 1,
+    "turns": 11,
+    "input_chars": 111891,
+    "output_chars": 14796
+  },
+  {
+    "date": "2026-08-18",
+    "conversations": 6,
+    "turns": 920,
+    "input_chars": 116393032,
+    "output_chars": 859152
+  },
+  {
+    "date": "2026-08-19",
+    "conversations": 2,
+    "turns": 773,
+    "input_chars": 325179965,
+    "output_chars": 821305
+  },
+  {
+    "date": "2026-08-20",
+    "conversations": 25,
+    "turns": 4477,
+    "input_chars": 1736648825,
+    "output_chars": 4451733
+  },
+  {
+    "date": "2026-08-21",
+    "conversations": 8,
+    "turns": 2540,
+    "input_chars": 884411242,
+    "output_chars": 2924912
+  }
+]

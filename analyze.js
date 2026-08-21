@@ -92,14 +92,97 @@ function formatNum(num) {
     return Math.round(num).toLocaleString('en-US');
 }
 
-function analyzeTokens({ ratio = 3.5, showDaily = true, days = 30, filterMonth = null } = {}) {
+// 同步统计数据到本地 JSON 文件（保留历史缺失日期，同日期取最大值）
+function loadExistingJson(jsonPath) {
+    if (!fs.existsSync(jsonPath)) {
+        return {};
+    }
+    try {
+        const raw = fs.readFileSync(jsonPath, 'utf-8');
+        if (!raw.trim()) return {};
+        const parsed = JSON.parse(raw);
+        const map = {};
+        if (Array.isArray(parsed)) {
+            for (const item of parsed) {
+                if (!item || typeof item !== 'object') continue;
+                const d = item.date || item.日期 || item.dt;
+                if (!d) continue;
+                map[d] = {
+                    date: String(d),
+                    conversations: Number(item.conversations ?? item.conv ?? item.对话数 ?? 0) || 0,
+                    turns: Number(item.turns ?? item.rounds ?? item.交互轮数 ?? 0) || 0,
+                    input_chars: Number(item.input_chars ?? item.in_chars ?? item.输入字符 ?? 0) || 0,
+                    output_chars: Number(item.output_chars ?? item.out_chars ?? item.输出字符 ?? 0) || 0
+                };
+            }
+        } else if (typeof parsed === 'object' && parsed !== null) {
+            for (const [k, item] of Object.entries(parsed)) {
+                if (!item || typeof item !== 'object') continue;
+                const d = item.date || item.日期 || k;
+                map[d] = {
+                    date: String(d),
+                    conversations: Number(item.conversations ?? item.conv ?? item.对话数 ?? 0) || 0,
+                    turns: Number(item.turns ?? item.rounds ?? item.交互轮数 ?? 0) || 0,
+                    input_chars: Number(item.input_chars ?? item.in_chars ?? item.输入字符 ?? 0) || 0,
+                    output_chars: Number(item.output_chars ?? item.out_chars ?? item.输出字符 ?? 0) || 0
+                };
+            }
+        }
+        return map;
+    } catch (err) {
+        console.warn(`[警告] 读取现有 JSON 文件失败 (${err.message})，将重新创建。`);
+        return {};
+    }
+}
+
+function syncStatsToJson(dailyStats, jsonPath) {
+    const existingMap = loadExistingJson(jsonPath);
+    const mergedMap = { ...existingMap };
+
+    for (const [dateStr, stat] of Object.entries(dailyStats)) {
+        if (!dateStr || dateStr === 'Unknown') continue;
+        const currentConv = stat.convs ? stat.convs.size : (stat.conversations || 0);
+        const currentTurns = stat.turns || 0;
+        const currentInputChars = stat.input_chars || 0;
+        const currentOutputChars = stat.output_chars || 0;
+
+        if (!mergedMap[dateStr]) {
+            mergedMap[dateStr] = {
+                date: dateStr,
+                conversations: currentConv,
+                turns: currentTurns,
+                input_chars: currentInputChars,
+                output_chars: currentOutputChars
+            };
+        } else {
+            const old = mergedMap[dateStr];
+            mergedMap[dateStr] = {
+                date: dateStr,
+                conversations: Math.max(old.conversations || 0, currentConv),
+                turns: Math.max(old.turns || 0, currentTurns),
+                input_chars: Math.max(old.input_chars || 0, currentInputChars),
+                output_chars: Math.max(old.output_chars || 0, currentOutputChars)
+            };
+        }
+    }
+
+    const sortedDates = Object.keys(mergedMap).sort();
+    const resultList = sortedDates.map(d => mergedMap[d]);
+
+    try {
+        fs.writeFileSync(jsonPath, JSON.stringify(resultList, null, 2) + '\n', 'utf-8');
+        const relativePath = path.relative(process.cwd(), jsonPath) || path.basename(jsonPath);
+        console.log(`\n[数据已保存] 统计数据已同步写入至: ${relativePath} (共 ${resultList.length} 条日期记录)`);
+    } catch (err) {
+        console.error(`\n[错误] 写入 JSON 文件失败: ${err.message}`);
+    }
+
+    return resultList;
+}
+
+function analyzeTokens({ ratio = 3.5, showDaily = true, days = 30, filterMonth = null, jsonFile = 'stats.json', saveJson = true } = {}) {
     const brainDir = path.join(os.homedir(), '.gemini', 'antigravity-cli', 'brain');
     const files = findTranscriptFiles(brainDir);
-
-    if (files.length === 0) {
-        console.log(`未找到对话轨迹文件 (扫描路径: ${path.join(brainDir, '*', '.system_generated', 'logs', 'transcript.jsonl')})`);
-        return;
-    }
 
     const dailyStats = {};
     const monthlyStats = {};
@@ -111,64 +194,68 @@ function analyzeTokens({ ratio = 3.5, showDaily = true, days = 30, filterMonth =
         return map[key];
     };
 
-    for (const fpath of files) {
-        const dirParts = fpath.split(path.sep);
-        const convId = dirParts[dirParts.length - 4];
+    if (files.length === 0) {
+        console.log(`未找到对话轨迹文件 (扫描路径: ${path.join(brainDir, '*', '.system_generated', 'logs', 'transcript.jsonl')})`);
+    } else {
+        for (const fpath of files) {
+            const dirParts = fpath.split(path.sep);
+            const convId = dirParts[dirParts.length - 4];
 
-        let content = '';
-        try {
-            content = fs.readFileSync(fpath, 'utf-8');
-        } catch {
-            continue;
-        }
-
-        const lines = content.split(/\r?\n/);
-        const steps = [];
-        for (const line of lines) {
-            if (!line.trim()) continue;
+            let content = '';
             try {
-                steps.push(JSON.parse(line));
+                content = fs.readFileSync(fpath, 'utf-8');
             } catch {
-                // 忽略非合法 JSON 行
+                continue;
             }
-        }
 
-        if (steps.length === 0) continue;
-
-        let runningContextLen = 0;
-        for (const step of steps) {
-            const createdAt = step.created_at || '';
-            const source = step.source || '';
-            const stepType = step.type || '';
-            const contentData = step.content || '';
-            const toolCalls = step.tool_calls || [];
-
-            // 精准计算字符数
-            let textLen = getExactCharCount(contentData);
-            if (Array.isArray(toolCalls) && toolCalls.length > 0) {
+            const lines = content.split(/\r?\n/);
+            const steps = [];
+            for (const line of lines) {
+                if (!line.trim()) continue;
                 try {
-                    textLen += getExactCharCount(JSON.stringify(toolCalls));
-                } catch {}
+                    steps.push(JSON.parse(line));
+                } catch {
+                    // 忽略非合法 JSON 行
+                }
             }
 
-            if (source === 'MODEL' || stepType === 'PLANNER_RESPONSE') {
-                const dtStr = createdAt ? createdAt.substring(0, 10) : 'Unknown';
-                const mStr = createdAt ? createdAt.substring(0, 7) : 'Unknown';
+            if (steps.length === 0) continue;
 
-                const dStat = getOrInitStat(dailyStats, dtStr);
-                dStat.input_chars += runningContextLen;
-                dStat.output_chars += textLen;
-                dStat.turns += 1;
-                dStat.convs.add(convId);
+            let runningContextLen = 0;
+            for (const step of steps) {
+                const createdAt = step.created_at || '';
+                const source = step.source || '';
+                const stepType = step.type || '';
+                const contentData = step.content || '';
+                const toolCalls = step.tool_calls || [];
 
-                const mStat = getOrInitStat(monthlyStats, mStr);
-                mStat.input_chars += runningContextLen;
-                mStat.output_chars += textLen;
-                mStat.turns += 1;
-                mStat.convs.add(convId);
+                // 精准计算字符数
+                let textLen = getExactCharCount(contentData);
+                if (Array.isArray(toolCalls) && toolCalls.length > 0) {
+                    try {
+                        textLen += getExactCharCount(JSON.stringify(toolCalls));
+                    } catch {}
+                }
+
+                if (source === 'MODEL' || stepType === 'PLANNER_RESPONSE') {
+                    const dtStr = createdAt ? createdAt.substring(0, 10) : 'Unknown';
+                    const mStr = createdAt ? createdAt.substring(0, 7) : 'Unknown';
+
+                    const dStat = getOrInitStat(dailyStats, dtStr);
+                    dStat.input_chars += runningContextLen;
+                    dStat.output_chars += textLen;
+                    dStat.turns += 1;
+                    dStat.convs.add(convId);
+
+                    const mStat = getOrInitStat(monthlyStats, mStr);
+                    mStat.input_chars += runningContextLen;
+                    mStat.output_chars += textLen;
+                    mStat.turns += 1;
+                    mStat.convs.add(convId);
+                }
+
+                runningContextLen += textLen;
             }
-
-            runningContextLen += textLen;
         }
     }
 
@@ -273,6 +360,21 @@ function analyzeTokens({ ratio = 3.5, showDaily = true, days = 30, filterMonth =
         }
         console.log(divider);
     }
+
+    if (saveJson) {
+        const jsonPath = path.resolve(process.cwd(), jsonFile);
+        syncStatsToJson(dailyStats, jsonPath);
+
+        // 如果生成默认 stats.json，自动触发更新图表与 README
+        try {
+            const generator = require('./generate.js');
+            if (generator && typeof generator.run === 'function') {
+                generator.run();
+            }
+        } catch {
+            // 忽略非必须的图表生成错误
+        }
+    }
 }
 
 // 简易 CLI 参数解析
@@ -282,7 +384,9 @@ function parseArgs() {
         ratio: 3.5,
         days: 30,
         filterMonth: null,
-        showDaily: true
+        showDaily: true,
+        jsonFile: 'stats.json',
+        saveJson: true
     };
 
     for (let i = 0; i < rawArgs.length; i++) {
@@ -295,15 +399,21 @@ function parseArgs() {
             options.filterMonth = rawArgs[++i];
         } else if (arg === '--no-daily') {
             options.showDaily = false;
+        } else if ((arg === '--output' || arg === '-o' || arg === '--json') && rawArgs[i + 1]) {
+            options.jsonFile = rawArgs[++i];
+        } else if (arg === '--no-json') {
+            options.saveJson = false;
         } else if (arg === '--help' || arg === '-h') {
             console.log(`
 Antigravity Token/Character Consumption Statistics Tool (Node.js Version)
 
 Options:
-  --ratio <num>    Character to Token ratio (default: 3.5)
-  --days <num>     Number of recent days to show in daily view (default: 30)
-  --month <str>    Filter statistics for a specific month (e.g. 2026-08)
-  --no-daily       Hide daily breakdown and show only monthly summary
+  --ratio <num>        Character to Token ratio (default: 3.5)
+  --days <num>         Number of recent days to show in daily view (default: 30)
+  --month <str>        Filter statistics for a specific month (e.g. 2026-08)
+  --no-daily           Hide daily breakdown and show only monthly summary
+  --output, -o <path>  JSON output file path (default: stats.json)
+  --no-json            Do not save/update JSON file
             `);
             process.exit(0);
         }

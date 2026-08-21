@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trendBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0b1329" />
+    </linearGradient>
+    <linearGradient id="areaFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .chart-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #f0f6fc; }
+    .chart-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #8b949e; }
+    .legend-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #c9d1d9; }
+    .pill-badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #38bdf8; }
+  </style>
+
+  <!-- Background Panel -->
+  <rect x="1" y="1" width="878" height="368" rx="14" fill="url(#trendBg)" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Header -->
+  <g transform="translate(30, 24)">
+    <circle cx="12" cy="12" r="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M 6 15 L 10 10 L 14 13 L 18 8" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="32" y="12" class="chart-title">Daily Activity Trend (Recent 7 Days)</text>
+    <text x="32" y="28" class="chart-sub">Daily Total Characters (Input + Output) Activity Curve</text>
+  </g>
+
+  <!-- Legend & Scope Pill -->
+  <g transform="translate(600, 24)">
+    <rect x="0" y="2" width="100" height="24" rx="12" fill="#1f2937" stroke="#374151" stroke-width="1" />
+    <text x="50" y="17" text-anchor="middle" class="pill-badge">Last 7 Days</text>
+
+    <rect x="115" y="8" width="10" height="10" rx="2" fill="#38bdf8" />
+    <text x="132" y="17" class="legend-text">Total Chars</text>
+  </g>
+
+  <!-- Grid lines & Y Labels -->
+  
+    <line x1="75" y1="320" x2="845" y2="320" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="324" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">0</text>
+    <line x1="75" y1="257.5" x2="845" y2="257.5" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="261.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">500.57 M</text>
+    <line x1="75" y1="195" x2="845" y2="195" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.00 B</text>
+    <line x1="75" y1="132.5" x2="845" y2="132.5" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="136.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.50 B</text>
+    <line x1="75" y1="70" x2="845" y2="70" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="74" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.00 B</text>
+
+  <!-- X-Axis Baseline -->
+  <line x1="75" y1="320" x2="845" y2="320" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Area Fill -->
+  <path d="M 75 319.99657737721896 C 96.4 320.0, 160.6 320.0, 203.3 320.0 C 246.1 320.0, 288.9 322.4, 331.7 320.0 C 374.4 317.5, 417.2 312.1, 460.0 305.4 C 502.8 298.6, 545.6 313.1, 588.3 279.3 C 631.1 245.5, 673.9 114.3, 716.7 102.6 C 759.4 90.9, 823.6 191.4, 845.0 209.2 L 845 320 L 75 320 Z" fill="url(#areaFill)" />
+
+  <!-- Trend Curve Line -->
+  <path d="M 75 319.99657737721896 C 96.4 320.0, 160.6 320.0, 203.3 320.0 C 246.1 320.0, 288.9 322.4, 331.7 320.0 C 374.4 317.5, 417.2 312.1, 460.0 305.4 C 502.8 298.6, 545.6 313.1, 588.3 279.3 C 631.1 245.5, 673.9 114.3, 716.7 102.6 C 759.4 90.9, 823.6 191.4, 845.0 209.2" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)" />
+
+  <!-- Data Points -->
+  
+    <g class="data-point">
+      <circle cx="75" cy="319.99657737721896" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="75" cy="319.99657737721896" r="2.5" fill="#38bdf8" />
+      <text x="75" y="307.99657737721896" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">27.4 K</text>
+    </g>
+    <g class="data-point">
+      <circle cx="203.33333333333331" cy="319.99993507355003" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="203.33333333333331" cy="319.99993507355003" r="2.5" fill="#38bdf8" />
+      <text x="203.33333333333331" y="307.99993507355003" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">520</text>
+    </g>
+    <g class="data-point">
+      <circle cx="331.66666666666663" cy="319.9841820439128" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="331.66666666666663" cy="319.9841820439128" r="2.5" fill="#38bdf8" />
+      <text x="331.66666666666663" y="307.9841820439128" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">126.7 K</text>
+    </g>
+    <g class="data-point">
+      <circle cx="460" cy="305.360061429851" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="460" cy="305.360061429851" r="2.5" fill="#38bdf8" />
+      <text x="460" y="293.360061429851" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">117.25 M</text>
+    </g>
+    <g class="data-point">
+      <circle cx="588.3333333333333" cy="279.29595165075506" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="588.3333333333333" cy="279.29595165075506" r="2.5" fill="#38bdf8" />
+      <text x="588.3333333333333" y="267.29595165075506" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">326.00 M</text>
+    </g>
+    <g class="data-point">
+      <circle cx="716.6666666666667" cy="102.6086956847457" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="716.6666666666667" cy="102.6086956847457" r="2.5" fill="#38bdf8" />
+      <text x="716.6666666666667" y="90.6086956847457" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">1.74 B</text>
+    </g>
+    <g class="data-point">
+      <circle cx="845" cy="209.2084877017532" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="845" cy="209.2084877017532" r="2.5" fill="#38bdf8" />
+      <text x="845" y="197.2084877017532" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">887.34 M</text>
+    </g>
+
+  <!-- X-Axis Date Labels -->
+  
+    <text x="75" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">07-17</text>
+    <text x="203.33333333333331" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">07-20</text>
+    <text x="331.66666666666663" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">07-22</text>
+    <text x="460" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-18</text>
+    <text x="588.3333333333333" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-19</text>
+    <text x="716.6666666666667" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-20</text>
+    <text x="845" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-21</text>
+</svg>

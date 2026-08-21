@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 370" width="100%" height="100%">
+  <defs>
+    <linearGradient id="monthBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#1a102f" />
+    </linearGradient>
+    <linearGradient id="monthBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .chart-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #f0f6fc; }
+    .chart-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #8b949e; }
+    .legend-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #c9d1d9; }
+    .pill-badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #c084fc; }
+  </style>
+
+  <!-- Background Panel -->
+  <rect x="1" y="1" width="878" height="368" rx="14" fill="url(#monthBg)" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Header -->
+  <g transform="translate(30, 24)">
+    <circle cx="12" cy="12" r="12" fill="#2e1065" stroke="#c084fc" stroke-width="1.5" />
+    <path d="M 7 17 L 7 11 M 12 17 L 12 7 M 17 17 L 17 13" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" />
+    <text x="32" y="12" class="chart-title">Monthly Activity Trend (Recent 6 Months)</text>
+    <text x="32" y="28" class="chart-sub">Monthly Total Characters &amp; Multi-turn Interaction Volumes</text>
+  </g>
+
+  <!-- Legend & Scope Pill -->
+  <g transform="translate(580, 24)">
+    <rect x="0" y="2" width="112" height="24" rx="12" fill="#2d154d" stroke="#581c87" stroke-width="1" />
+    <text x="56" y="17" text-anchor="middle" class="pill-badge">Last 6 Months</text>
+
+    <rect x="128" y="8" width="10" height="10" rx="2" fill="#c084fc" />
+    <text x="145" y="17" class="legend-text">Monthly Chars</text>
+  </g>
+
+  <!-- Grid lines & Y Labels -->
+  
+    <line x1="75" y1="315" x2="840" y2="315" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="319" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">0</text>
+    <line x1="75" y1="255" x2="840" y2="255" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="259" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">921.51 M</text>
+    <line x1="75" y1="195" x2="840" y2="195" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.84 B</text>
+    <line x1="75" y1="135" x2="840" y2="135" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="139" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.76 B</text>
+    <line x1="75" y1="75" x2="840" y2="75" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
+    <text x="63" y="79" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">3.69 B</text>
+
+  <!-- X-Axis Baseline -->
+  <line x1="75" y1="315" x2="840" y2="315" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Bars -->
+  
+    <g class="month-bar">
+      <!-- Background glow on hover -->
+      <rect x="226.25" y="307" width="80" height="8" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <!-- Bar fill -->
+      <rect x="230.25" y="311" width="72" height="4" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <!-- Top Accent -->
+      <line x1="232.25" y1="311" x2="300.25" y2="311" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <!-- Value text on top of bar -->
+      <text x="266.25" y="301" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">154.6 K</text>
+      <!-- Sub-label: turns/convs -->
+      <text x="266.25" y="285" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">17 轮</text>
+    </g>
+    <g class="month-bar">
+      <!-- Background glow on hover -->
+      <rect x="608.75" y="111.00000004340717" width="80" height="203.99999995659283" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <!-- Bar fill -->
+      <rect x="612.75" y="115.00000004340717" width="72" height="199.99999995659283" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <!-- Top Accent -->
+      <line x1="614.75" y1="115.00000004340717" x2="682.75" y2="115.00000004340717" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <!-- Value text on top of bar -->
+      <text x="648.75" y="105.00000004340717" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">3.07 B</text>
+      <!-- Sub-label: turns/convs -->
+      <text x="648.75" y="89.00000004340717" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">8,710 轮</text>
+    </g>
+
+  <!-- X-Axis Labels -->
+  
+    <g transform="translate(266.25, 335)">
+      <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-07</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">3 天活跃 · 3 对话</text>
+    </g>
+    <g transform="translate(648.75, 335)">
+      <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-08</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">4 天活跃 · 41 对话</text>
+    </g>
+</svg>
