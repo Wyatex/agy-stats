@@ -29,7 +29,7 @@
   },
   {
     "date": "2026-08-19",
-    "conversations": 2,
+    "conversations": 3,
     "turns": 773,
     "input_chars": 325179965,
     "output_chars": 821305
@@ -47,5 +47,26 @@
     "turns": 2540,
     "input_chars": 884411242,
     "output_chars": 2924912
+  },
+  {
+    "date": "2026-08-22",
+    "conversations": 2,
+    "turns": 588,
+    "input_chars": 180540055,
+    "output_chars": 792594
+  },
+  {
+    "date": "2026-08-23",
+    "conversations": 2,
+    "turns": 725,
+    "input_chars": 312962712,
+    "output_chars": 885436
+  },
+  {
+    "date": "2026-08-24",
+    "conversations": 2,
+    "turns": 123,
+    "input_chars": 4589707,
+    "output_chars": 130912
   }
 ]
