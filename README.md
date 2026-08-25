@@ -8,8 +8,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D16-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node Version" />
-  <img src="https://img.shields.io/badge/Total_Chars-3.57%20B-38bdf8?style=flat-square&logo=speedtest&logoColor=white" alt="Total Chars" />
-  <img src="https://img.shields.io/badge/Total_Turns-10%2C163-34d399?style=flat-square&logo=counterstrike&logoColor=white" alt="Total Turns" />
+  <img src="https://img.shields.io/badge/Total_Chars-3.96%20B-38bdf8?style=flat-square&logo=speedtest&logoColor=white" alt="Total Chars" />
+  <img src="https://img.shields.io/badge/Total_Turns-11%2C127-34d399?style=flat-square&logo=counterstrike&logoColor=white" alt="Total Turns" />
   <img src="https://img.shields.io/badge/Active_Days-10_Days-fbbf24?style=flat-square&logo=clockify&logoColor=white" alt="Active Days" />
   <img src="https://img.shields.io/badge/Zero_Dependencies-Pure_Node.js-818cf8?style=flat-square" alt="Zero Dependencies" />
 </p>
@@ -52,7 +52,7 @@
 
 | 月份 | 活跃天数 | 对话数 | 交互轮数 | 输入字符 | 输出字符 | 总字符消耗 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `2026-08` | 7 天 | **48** | 10,146 | 3,560,725,538 | 10,866,044 | **3,571,591,582** |
+| `2026-08` | 7 天 | **49** | 11,110 | 3,944,807,070 | 12,067,944 | **3,956,875,014** |
 | `2026-07` | 3 天 | **3** | 17 | 132,988 | 21,631 | **154,619** |
 
 </details>
@@ -65,7 +65,7 @@
 
 | 日期 | 对话数 | 交互轮数 | 精准输入字符 | 精准输出字符 | 精准总字符消耗 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| `2026-08-24` | **2** | 123 | 4,589,707 | 130,912 | **4,720,619** |
+| `2026-08-24` | **3** | 1,087 | 388,671,239 | 1,332,812 | **390,004,051** |
 | `2026-08-23` | **2** | 725 | 312,962,712 | 885,436 | **313,848,148** |
 | `2026-08-22` | **2** | 588 | 180,540,055 | 792,594 | **181,332,649** |
 | `2026-08-21` | **8** | 2,540 | 884,411,242 | 2,924,912 | **887,336,154** |
@@ -122,5 +122,5 @@ Options:
 ---
 
 <div align="center">
-  <sub>Last Synced: <code>2026-08-24 23:36</code> • Powered by <b>Antigravity Stat Tracker</b></sub>
+  <sub>Last Synced: <code>2026-08-25 10:53</code> • Powered by <b>Antigravity Stat Tracker</b></sub>
 </div>

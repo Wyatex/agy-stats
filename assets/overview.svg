@@ -74,8 +74,8 @@
     <circle cx="26" cy="28" r="12" fill="#0369a1" fill-opacity="0.25" />
     <text x="26" y="32" text-anchor="middle" font-size="12" fill="#38bdf8">📥</text>
     <text x="48" y="32" class="font-sans card-label" fill="#38bdf8">Input Chars</text>
-    <text x="20" y="75" class="font-sans card-val" fill="#e0f2fe">3.56 B</text>
-    <text x="20" y="98" class="font-sans card-sub">Exact: 3,560,858,526</text>
+    <text x="20" y="75" class="font-sans card-val" fill="#e0f2fe">3.94 B</text>
+    <text x="20" y="98" class="font-sans card-sub">Exact: 3,944,940,058</text>
     <text x="20" y="116" class="font-sans card-sub" fill="#60a5fa">Prompt context chars</text>
   </g>
 
@@ -85,8 +85,8 @@
     <circle cx="26" cy="28" r="12" fill="#6b21a8" fill-opacity="0.25" />
     <text x="26" y="32" text-anchor="middle" font-size="12" fill="#c084fc">📤</text>
     <text x="48" y="32" class="font-sans card-label" fill="#c084fc">Output Chars</text>
-    <text x="20" y="75" class="font-sans card-val" fill="#f3e8ff">10.89 M</text>
-    <text x="20" y="98" class="font-sans card-sub">Exact: 10,887,675</text>
+    <text x="20" y="75" class="font-sans card-val" fill="#f3e8ff">12.09 M</text>
+    <text x="20" y="98" class="font-sans card-sub">Exact: 12,089,575</text>
     <text x="20" y="116" class="font-sans card-sub" fill="#c084fc">Model generated chars</text>
   </g>
 
@@ -96,8 +96,8 @@
     <circle cx="26" cy="28" r="12" fill="#065f46" fill-opacity="0.25" />
     <text x="26" y="32" text-anchor="middle" font-size="12" fill="#34d399">💬</text>
     <text x="48" y="32" class="font-sans card-label" fill="#34d399">Total Turns</text>
-    <text x="20" y="75" class="font-sans card-val" fill="#d1fae5">10,163</text>
-    <text x="20" y="98" class="font-sans card-sub">Avg: ~351.4 K chars/turn</text>
+    <text x="20" y="75" class="font-sans card-val" fill="#d1fae5">11,127</text>
+    <text x="20" y="98" class="font-sans card-sub">Avg: ~355.6 K chars/turn</text>
     <text x="20" y="116" class="font-sans card-sub" fill="#34d399">Multi-turn interactions</text>
   </g>
 
@@ -107,7 +107,7 @@
     <circle cx="26" cy="28" r="12" fill="#92400e" fill-opacity="0.25" />
     <text x="26" y="32" text-anchor="middle" font-size="12" fill="#fbbf24">📁</text>
     <text x="48" y="32" class="font-sans card-label" fill="#fbbf24">Conversations</text>
-    <text x="20" y="75" class="font-sans card-val" fill="#fef3c7">51</text>
+    <text x="20" y="75" class="font-sans card-val" fill="#fef3c7">52</text>
     <text x="20" y="98" class="font-sans card-sub">Active Days: 10 days</text>
     <text x="20" y="116" class="font-sans card-sub" fill="#fbbf24">Tracked brain sessions</text>
   </g>
@@ -129,7 +129,7 @@
     <g transform="translate(320, 33)">
       <text class="font-sans pill-text">
         <tspan fill="#8b949e">⚡ Daily Average: </tspan>
-        <tspan font-weight="700" fill="#34d399">357.17 M Chars/Day</tspan>
+        <tspan font-weight="700" fill="#34d399">395.70 M Chars/Day</tspan>
       </text>
     </g>
 
@@ -137,7 +137,7 @@
     <g transform="translate(600, 33)">
       <text class="font-sans pill-text">
         <tspan fill="#8b949e">🕒 Updated: </tspan>
-        <tspan font-weight="600" fill="#c9d1d9">2026-08-24 23:36</tspan>
+        <tspan font-weight="600" fill="#c9d1d9">2026-08-25 10:53</tspan>
       </text>
     </g>
   </g>

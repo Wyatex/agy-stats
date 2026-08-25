@@ -64,9 +64,9 @@
   },
   {
     "date": "2026-08-24",
-    "conversations": 2,
-    "turns": 123,
-    "input_chars": 4589707,
-    "output_chars": 130912
+    "conversations": 3,
+    "turns": 1087,
+    "input_chars": 388671239,
+    "output_chars": 1332812
   }
 ]

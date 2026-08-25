@@ -65,10 +65,10 @@
   <line x1="75" y1="320" x2="845" y2="320" stroke="#30363d" stroke-width="1.2" />
 
   <!-- Area Fill -->
-  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 277.1, 716.7 280.8 C 759.4 284.5, 823.6 313.0, 845.0 319.4 L 845 320 L 75 320 Z" fill="url(#areaFill)" />
+  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 285.2, 716.7 280.8 C 759.4 276.5, 823.6 272.9, 845.0 271.3 L 845 320 L 75 320 Z" fill="url(#areaFill)" />
 
   <!-- Trend Curve Line -->
-  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 277.1, 716.7 280.8 C 759.4 284.5, 823.6 313.0, 845.0 319.4" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)" />
+  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 285.2, 716.7 280.8 C 759.4 276.5, 823.6 272.9, 845.0 271.3" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)" />
 
   <!-- Data Points -->
   
@@ -103,9 +103,9 @@
       <text x="716.6666666666667" y="268.8133729340595" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">313.85 M</text>
     </g>
     <g class="data-point">
-      <circle cx="845" cy="319.4105903206624" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="845" cy="319.4105903206624" r="2.5" fill="#38bdf8" />
-      <text x="845" y="307.4105903206624" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">4.72 M</text>
+      <circle cx="845" cy="271.30465673245567" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="845" cy="271.30465673245567" r="2.5" fill="#38bdf8" />
+      <text x="845" y="259.30465673245567" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">390.00 M</text>
     </g>
 
   <!-- X-Axis Date Labels -->
