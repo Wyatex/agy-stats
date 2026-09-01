@@ -44,13 +44,13 @@
     <line x1="75" y1="315" x2="840" y2="315" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
     <text x="63" y="319" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">0</text>
     <line x1="75" y1="255" x2="840" y2="255" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="259" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.19 B</text>
+    <text x="63" y="259" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.29 B</text>
     <line x1="75" y1="195" x2="840" y2="195" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.37 B</text>
+    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">4.57 B</text>
     <line x1="75" y1="135" x2="840" y2="135" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="139" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">3.56 B</text>
+    <text x="63" y="139" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">6.86 B</text>
     <line x1="75" y1="75" x2="840" y2="75" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="79" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">4.75 B</text>
+    <text x="63" y="79" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">9.14 B</text>
 
   <!-- X-Axis Baseline -->
   <line x1="75" y1="315" x2="840" y2="315" stroke="#30363d" stroke-width="1.2" />
@@ -59,37 +59,53 @@
   
     <g class="month-bar">
       <!-- Background glow on hover -->
-      <rect x="226.25" y="307" width="80" height="8" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <rect x="162.5" y="307" width="80" height="8" rx="8" fill="#818cf8" fill-opacity="0.12" />
       <!-- Bar fill -->
-      <rect x="230.25" y="311" width="72" height="4" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <rect x="166.5" y="311" width="72" height="4" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
       <!-- Top Accent -->
-      <line x1="232.25" y1="311" x2="300.25" y2="311" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <line x1="168.5" y1="311" x2="236.5" y2="311" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
       <!-- Value text on top of bar -->
-      <text x="266.25" y="301" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">154.6 K</text>
+      <text x="202.5" y="301" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">154.6 K</text>
       <!-- Sub-label: turns/convs -->
-      <text x="266.25" y="285" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">17 轮</text>
+      <text x="202.5" y="285" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">17 轮</text>
     </g>
     <g class="month-bar">
       <!-- Background glow on hover -->
-      <rect x="608.75" y="111.00000000842417" width="80" height="203.99999999157583" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <rect x="417.5" y="111.00000000437632" width="80" height="203.99999999562368" rx="8" fill="#818cf8" fill-opacity="0.12" />
       <!-- Bar fill -->
-      <rect x="612.75" y="115.00000000842417" width="72" height="199.99999999157583" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <rect x="421.5" y="115.00000000437632" width="72" height="199.99999999562368" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
       <!-- Top Accent -->
-      <line x1="614.75" y1="115.00000000842417" x2="682.75" y2="115.00000000842417" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <line x1="423.5" y1="115.00000000437632" x2="491.5" y2="115.00000000437632" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
       <!-- Value text on top of bar -->
-      <text x="648.75" y="105.00000000842417" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">3.96 B</text>
+      <text x="457.5" y="105.00000000437632" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">7.62 B</text>
       <!-- Sub-label: turns/convs -->
-      <text x="648.75" y="89.00000000842417" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">11,110 轮</text>
+      <text x="457.5" y="89.00000000437632" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">17,528 轮</text>
+    </g>
+    <g class="month-bar">
+      <!-- Background glow on hover -->
+      <rect x="672.5" y="303.0895787528678" width="80" height="11.910421247132188" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <!-- Bar fill -->
+      <rect x="676.5" y="307.0895787528678" width="72" height="7.910421247132188" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <!-- Top Accent -->
+      <line x1="678.5" y1="307.0895787528678" x2="746.5" y2="307.0895787528678" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <!-- Value text on top of bar -->
+      <text x="712.5" y="297.0895787528678" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">301.26 M</text>
+      <!-- Sub-label: turns/convs -->
+      <text x="712.5" y="281.0895787528678" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">1,447 轮</text>
     </g>
 
   <!-- X-Axis Labels -->
   
-    <g transform="translate(266.25, 335)">
+    <g transform="translate(202.5, 335)">
       <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-07</text>
       <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">3 天活跃 · 3 对话</text>
     </g>
-    <g transform="translate(648.75, 335)">
+    <g transform="translate(457.5, 335)">
       <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-08</text>
-      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">7 天活跃 · 49 对话</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">12 天活跃 · 73 对话</text>
+    </g>
+    <g transform="translate(712.5, 335)">
+      <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-09</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">1 天活跃 · 6 对话</text>
     </g>
 </svg>

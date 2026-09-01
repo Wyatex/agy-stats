@@ -53,68 +53,68 @@
     <line x1="75" y1="320" x2="845" y2="320" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
     <text x="63" y="324" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">0</text>
     <line x1="75" y1="257.5" x2="845" y2="257.5" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="261.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">500.57 M</text>
+    <text x="63" y="261.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">549.94 M</text>
     <line x1="75" y1="195" x2="845" y2="195" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.00 B</text>
+    <text x="63" y="199" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.10 B</text>
     <line x1="75" y1="132.5" x2="845" y2="132.5" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="136.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.50 B</text>
+    <text x="63" y="136.5" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">1.65 B</text>
     <line x1="75" y1="70" x2="845" y2="70" stroke="#21262d" stroke-dasharray="3,3" stroke-width="1" />
-    <text x="63" y="74" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.00 B</text>
+    <text x="63" y="74" text-anchor="end" font-size="11" fill="#8b949e" font-family="-apple-system, sans-serif">2.20 B</text>
 
   <!-- X-Axis Baseline -->
   <line x1="75" y1="320" x2="845" y2="320" stroke="#30363d" stroke-width="1.2" />
 
   <!-- Area Fill -->
-  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 285.2, 716.7 280.8 C 759.4 276.5, 823.6 272.9, 845.0 271.3 L 845 320 L 75 320 Z" fill="url(#areaFill)" />
+  <path d="M 75 275.6767478398927 C 96.4 274.7, 160.6 272.1, 203.3 269.5 C 246.1 267.0, 288.9 264.8, 331.7 260.4 C 374.4 255.9, 417.2 234.8, 460.0 242.9 C 502.8 250.9, 545.6 332.0, 588.3 308.7 C 631.1 285.3, 673.9 106.4, 716.7 102.6 C 759.4 98.8, 823.6 255.2, 845.0 285.8 L 845 320 L 75 320 Z" fill="url(#areaFill)" />
 
   <!-- Trend Curve Line -->
-  <path d="M 75 305.360061429851 C 96.4 301.0, 160.6 313.1, 203.3 279.3 C 246.1 245.5, 288.9 114.3, 331.7 102.6 C 374.4 90.9, 417.2 176.8, 460.0 209.2 C 502.8 241.7, 545.6 285.4, 588.3 297.4 C 631.1 309.3, 673.9 285.2, 716.7 280.8 C 759.4 276.5, 823.6 272.9, 845.0 271.3" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)" />
+  <path d="M 75 275.6767478398927 C 96.4 274.7, 160.6 272.1, 203.3 269.5 C 246.1 267.0, 288.9 264.8, 331.7 260.4 C 374.4 255.9, 417.2 234.8, 460.0 242.9 C 502.8 250.9, 545.6 332.0, 588.3 308.7 C 631.1 285.3, 673.9 106.4, 716.7 102.6 C 759.4 98.8, 823.6 255.2, 845.0 285.8" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)" />
 
   <!-- Data Points -->
   
     <g class="data-point">
-      <circle cx="75" cy="305.360061429851" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="75" cy="305.360061429851" r="2.5" fill="#38bdf8" />
-      <text x="75" y="293.360061429851" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">117.25 M</text>
+      <circle cx="75" cy="275.6767478398927" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="75" cy="275.6767478398927" r="2.5" fill="#38bdf8" />
+      <text x="75" y="263.6767478398927" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">390.00 M</text>
     </g>
     <g class="data-point">
-      <circle cx="203.33333333333331" cy="279.29595165075506" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="203.33333333333331" cy="279.29595165075506" r="2.5" fill="#38bdf8" />
-      <text x="203.33333333333331" y="267.29595165075506" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">326.00 M</text>
+      <circle cx="203.33333333333331" cy="269.54936349354784" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="203.33333333333331" cy="269.54936349354784" r="2.5" fill="#38bdf8" />
+      <text x="203.33333333333331" y="257.54936349354784" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">443.92 M</text>
     </g>
     <g class="data-point">
-      <circle cx="331.66666666666663" cy="102.6086956847457" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="331.66666666666663" cy="102.6086956847457" r="2.5" fill="#38bdf8" />
-      <text x="331.66666666666663" y="90.6086956847457" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">1.74 B</text>
+      <circle cx="331.66666666666663" cy="260.38192454617854" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="331.66666666666663" cy="260.38192454617854" r="2.5" fill="#38bdf8" />
+      <text x="331.66666666666663" y="248.38192454617854" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">524.58 M</text>
     </g>
     <g class="data-point">
-      <circle cx="460" cy="209.2084877017532" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="460" cy="209.2084877017532" r="2.5" fill="#38bdf8" />
-      <text x="460" y="197.2084877017532" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">887.34 M</text>
+      <circle cx="460" cy="242.85177205437714" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="460" cy="242.85177205437714" r="2.5" fill="#38bdf8" />
+      <text x="460" y="230.85177205437714" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">678.83 M</text>
     </g>
     <g class="data-point">
-      <circle cx="588.3333333333333" cy="297.3590669993627" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="588.3333333333333" cy="297.3590669993627" r="2.5" fill="#38bdf8" />
-      <text x="588.3333333333333" y="285.3590669993627" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">181.33 M</text>
+      <circle cx="588.3333333333333" cy="308.67376811042965" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="588.3333333333333" cy="308.67376811042965" r="2.5" fill="#38bdf8" />
+      <text x="588.3333333333333" y="296.67376811042965" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">99.66 M</text>
     </g>
     <g class="data-point">
-      <circle cx="716.6666666666667" cy="280.8133729340595" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="716.6666666666667" cy="280.8133729340595" r="2.5" fill="#38bdf8" />
-      <text x="716.6666666666667" y="268.8133729340595" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">313.85 M</text>
+      <circle cx="716.6666666666667" cy="102.60869567688005" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="716.6666666666667" cy="102.60869567688005" r="2.5" fill="#38bdf8" />
+      <text x="716.6666666666667" y="90.60869567688005" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">1.91 B</text>
     </g>
     <g class="data-point">
-      <circle cx="845" cy="271.30465673245567" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
-      <circle cx="845" cy="271.30465673245567" r="2.5" fill="#38bdf8" />
-      <text x="845" y="259.30465673245567" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">390.00 M</text>
+      <circle cx="845" cy="285.76266311218666" r="6" fill="#0d1117" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="845" cy="285.76266311218666" r="2.5" fill="#38bdf8" />
+      <text x="845" y="273.76266311218666" text-anchor="middle" font-size="11" font-weight="700" fill="#e0f2fe" font-family="-apple-system, sans-serif">301.26 M</text>
     </g>
 
   <!-- X-Axis Date Labels -->
   
-    <text x="75" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-18</text>
-    <text x="203.33333333333331" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-19</text>
-    <text x="331.66666666666663" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-20</text>
-    <text x="460" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-21</text>
-    <text x="588.3333333333333" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-22</text>
-    <text x="716.6666666666667" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-23</text>
-    <text x="845" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-24</text>
+    <text x="75" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-24</text>
+    <text x="203.33333333333331" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-25</text>
+    <text x="331.66666666666663" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-26</text>
+    <text x="460" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-27</text>
+    <text x="588.3333333333333" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-28</text>
+    <text x="716.6666666666667" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">08-31</text>
+    <text x="845" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e" font-family="-apple-system, sans-serif">09-01</text>
 </svg>

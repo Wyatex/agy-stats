@@ -68,5 +68,47 @@
     "turns": 1087,
     "input_chars": 388671239,
     "output_chars": 1332812
+  },
+  {
+    "date": "2026-08-25",
+    "conversations": 3,
+    "turns": 1127,
+    "input_chars": 442542358,
+    "output_chars": 1377067
+  },
+  {
+    "date": "2026-08-26",
+    "conversations": 3,
+    "turns": 1053,
+    "input_chars": 523261350,
+    "output_chars": 1323147
+  },
+  {
+    "date": "2026-08-27",
+    "conversations": 3,
+    "turns": 812,
+    "input_chars": 677833769,
+    "output_chars": 1000025
+  },
+  {
+    "date": "2026-08-28",
+    "conversations": 7,
+    "turns": 748,
+    "input_chars": 98845047,
+    "output_chars": 815427
+  },
+  {
+    "date": "2026-08-31",
+    "conversations": 8,
+    "turns": 2678,
+    "input_chars": 1909556568,
+    "output_chars": 3287937
+  },
+  {
+    "date": "2026-09-01",
+    "conversations": 6,
+    "turns": 1447,
+    "input_chars": 299668266,
+    "output_chars": 1588962
   }
 ]
