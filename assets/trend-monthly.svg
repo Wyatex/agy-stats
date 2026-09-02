@@ -83,15 +83,15 @@
     </g>
     <g class="month-bar">
       <!-- Background glow on hover -->
-      <rect x="672.5" y="303.0895787528678" width="80" height="11.910421247132188" rx="8" fill="#818cf8" fill-opacity="0.12" />
+      <rect x="672.5" y="281.27233500757205" width="80" height="33.72766499242796" rx="8" fill="#818cf8" fill-opacity="0.12" />
       <!-- Bar fill -->
-      <rect x="676.5" y="307.0895787528678" width="72" height="7.910421247132188" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
+      <rect x="676.5" y="285.27233500757205" width="72" height="29.72766499242796" rx="6" fill="url(#monthBarGrad)" stroke="#a855f7" stroke-width="1" />
       <!-- Top Accent -->
-      <line x1="678.5" y1="307.0895787528678" x2="746.5" y2="307.0895787528678" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+      <line x1="678.5" y1="285.27233500757205" x2="746.5" y2="285.27233500757205" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
       <!-- Value text on top of bar -->
-      <text x="712.5" y="297.0895787528678" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">301.26 M</text>
+      <text x="712.5" y="275.27233500757205" text-anchor="middle" font-size="12" font-weight="700" fill="#f3e8ff" font-family="-apple-system, sans-serif">1.13 B</text>
       <!-- Sub-label: turns/convs -->
-      <text x="712.5" y="281.0895787528678" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">1,447 轮</text>
+      <text x="712.5" y="259.27233500757205" text-anchor="middle" font-size="10" fill="#c084fc" font-family="-apple-system, sans-serif">4,030 轮</text>
     </g>
 
   <!-- X-Axis Labels -->
@@ -106,6 +106,6 @@
     </g>
     <g transform="translate(712.5, 335)">
       <text text-anchor="middle" font-size="12" font-weight="700" fill="#f0f6fc" font-family="-apple-system, sans-serif">2026-09</text>
-      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">1 天活跃 · 6 对话</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#8b949e" font-family="-apple-system, sans-serif">2 天活跃 · 14 对话</text>
     </g>
 </svg>
