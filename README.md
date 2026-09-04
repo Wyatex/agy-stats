@@ -8,9 +8,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%3E%3D16-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node Version" />
-  <img src="https://img.shields.io/badge/Total_Chars-8.75%20B-38bdf8?style=flat-square&logo=speedtest&logoColor=white" alt="Total Chars" />
-  <img src="https://img.shields.io/badge/Total_Turns-21%2C575-34d399?style=flat-square&logo=counterstrike&logoColor=white" alt="Total Turns" />
-  <img src="https://img.shields.io/badge/Active_Days-17_Days-fbbf24?style=flat-square&logo=clockify&logoColor=white" alt="Active Days" />
+  <img src="https://img.shields.io/badge/Total_Chars-8.93%20B-38bdf8?style=flat-square&logo=speedtest&logoColor=white" alt="Total Chars" />
+  <img src="https://img.shields.io/badge/Total_Turns-22%2C396-34d399?style=flat-square&logo=counterstrike&logoColor=white" alt="Total Turns" />
+  <img src="https://img.shields.io/badge/Active_Days-18_Days-fbbf24?style=flat-square&logo=clockify&logoColor=white" alt="Active Days" />
   <img src="https://img.shields.io/badge/Zero_Dependencies-Pure_Node.js-818cf8?style=flat-square" alt="Zero Dependencies" />
 </p>
 
@@ -52,7 +52,7 @@
 
 | 月份 | 活跃天数 | 对话数 | 交互轮数 | 输入字符 | 输出字符 | 总字符消耗 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `2026-09` | 2 天 | **14** | 4,030 | 1,127,377,880 | 4,758,282 | **1,132,136,162** |
+| `2026-09` | 3 天 | **22** | 4,851 | 1,304,816,161 | 5,646,813 | **1,310,462,974** |
 | `2026-08` | 12 天 | **73** | 17,528 | 7,596,846,162 | 19,871,547 | **7,616,717,709** |
 | `2026-07` | 3 天 | **3** | 17 | 132,988 | 21,631 | **154,619** |
 
@@ -66,7 +66,8 @@
 
 | 日期 | 对话数 | 交互轮数 | 精准输入字符 | 精准输出字符 | 精准总字符消耗 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| `2026-09-02` | **3** | 350 | 23,975,451 | 220,962 | **24,196,413** |
+| `2026-09-04` | **2** | 226 | 17,720,538 | 269,005 | **17,989,543** |
+| `2026-09-02` | **9** | 945 | 183,693,194 | 840,488 | **184,533,682** |
 | `2026-09-01` | **11** | 3,680 | 1,103,402,429 | 4,537,320 | **1,107,939,749** |
 | `2026-08-31` | **8** | 2,678 | 1,909,556,568 | 3,287,937 | **1,912,844,505** |
 | `2026-08-28` | **7** | 748 | 98,845,047 | 815,427 | **99,660,474** |
@@ -130,5 +131,5 @@ Options:
 ---
 
 <div align="center">
-  <sub>Last Synced: <code>2026-09-02 15:52</code> • Powered by <b>Antigravity Stat Tracker</b></sub>
+  <sub>Last Synced: <code>2026-09-04 20:33</code> • Powered by <b>Antigravity Stat Tracker</b></sub>
 </div>

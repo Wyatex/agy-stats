@@ -113,9 +113,16 @@
   },
   {
     "date": "2026-09-02",
-    "conversations": 3,
-    "turns": 350,
-    "input_chars": 23975451,
-    "output_chars": 220962
+    "conversations": 9,
+    "turns": 945,
+    "input_chars": 183693194,
+    "output_chars": 840488
+  },
+  {
+    "date": "2026-09-04",
+    "conversations": 2,
+    "turns": 226,
+    "input_chars": 17720538,
+    "output_chars": 269005
   }
 ]
